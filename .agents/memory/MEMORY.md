@@ -1,0 +1,1 @@
+- [Seat allocation preference scoring](allocation-preference-scoring.md) — rank contiguous blocks by aggregate zone preference, not their single best seat.

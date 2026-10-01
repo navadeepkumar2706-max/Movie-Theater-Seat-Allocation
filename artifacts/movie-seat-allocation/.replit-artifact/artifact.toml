@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Movie Theater Seat Allocation"
+description = "A staff-facing cinema operations app for managing movies, screens, shows, group requests, and conflict-safe seat allocations."
+version = "1.0.0"
+id = "artifacts/movie-seat-allocation"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25818
+
+[services.development]
+run = "pnpm --filter @workspace/movie-seat-allocation run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/movie-seat-allocation", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/movie-seat-allocation/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25818"
+BASE_PATH = "/"

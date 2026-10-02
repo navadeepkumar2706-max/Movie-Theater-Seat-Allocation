@@ -641,3 +641,18 @@
     .overview-aside { grid-template-columns:1fr; }.show-form,.movie-form,.screen-form,.request-form { grid-template-columns:1fr; }.form-actions { grid-column:auto; }.filters-row { align-items:stretch;flex-direction:column; }.segmented { overflow:auto; }.segmented button { white-space:nowrap; }.filter-select { width:100%; }.request-card { display:block; }.request-actions { margin:13px 0 0 43px; }.screen-grid,.movie-grid { grid-template-columns:1fr; }.detail-layout { gap:10px; }.seatmap-panel,.allocation-panel { padding:15px 12px; }.zone-legend { font-size:7px; }.show-meta-strip { gap:10px;margin-top:-7px; }.show-meta-strip span { font-size:9px; }.auth-art { display:none; }.auth-main { min-height:100dvh;padding:22px 16px; }.auth-card { width:100%;padding:25px 19px; }.auth-mobile-brand { display:flex; }.current-date { display:none; }
   }
 }
+.auth-form .field input {
+  background-color: #243247;
+  color: #eef8ff;
+  border-color: #35465c;
+  caret-color: #eef8ff;
+}
+
+.auth-form .field input::placeholder {
+  color: #9aafc4;
+}
+
+.auth-form .field input:-webkit-autofill {
+  -webkit-text-fill-color: #eef8ff;
+  -webkit-box-shadow: 0 0 0 1000px #243247 inset;
+}
